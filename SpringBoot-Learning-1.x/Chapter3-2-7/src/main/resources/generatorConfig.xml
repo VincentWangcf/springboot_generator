@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+
+    <!--  <classPathEntry location="D:\repository\maven\mysql\mysql-connector-java\5.1.47\mysql-connector-java-5.1.47.jar"/>-->
+    <!--  <classPathEntry location="/Users/caizhijie/.m2/repository/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.jar"/>-->
+    <classPathEntry
+            location="/Applications/maven/MavenReposity/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.jar"/>
+    <!--    location="D:/coding/Java Environment/maven/repository/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.jar"/>-->
+    <context id="mysql" defaultModelType="hierarchical" targetRuntime="MyBatis3Simple">
+
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/test06?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true&amp;useSSL=true"
+                        userId="root"
+                        password="123456">
+        </jdbcConnection>
+
+
+        <javaModelGenerator targetPackage="com.test.entity" targetProject="src/main/java">
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+
+        <javaClientGenerator targetPackage="com.test.repository" type="XMLMAPPER"
+                             targetProject="src/main/java"/>
+
+
+        <!--    <table tableName="av_tracker_task">-->
+        <!--      <generatedKey column="id" sqlStatement="MySql"/>-->
+        <!--    </table>-->
+        <!--    <table tableName="av_tracker_task_detail">-->
+        <!--      <generatedKey column="id" sqlStatement="MySql"/>-->
+        <!--    </table>-->
+        <table tableName="av_tracker_item">
+            <!--<generatedKey column="ii" sqlStatement="MySql"/>-->
+        </table>
+
+
+    </context>
+
+
+</generatorConfiguration>

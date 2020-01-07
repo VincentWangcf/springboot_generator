@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      url: mongodb://localhost:3306/mydb
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test05
+    username: root
+    password: 123456
