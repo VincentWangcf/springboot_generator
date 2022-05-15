@@ -20,40 +20,57 @@ import java.math.BigDecimal;
 @Transactional
 public class ApplicationTests {
 
-	@Autowired
-	private UserMapper userMapper;
+    @Autowired
+    private UserMapper userMapper;
 
-	@Test
-	@Rollback
-	public void findByName() throws Exception {
+    @Test
+    @Rollback
+    public void findByName() throws Exception {
 //		userMapper.insert("AAA", 20);
-		User u = userMapper.findByName("112");
-		System.out.println("user age "+u.getAge()+ "----user name " +u.getName());
+        User u = userMapper.findByName("112");
+        System.out.println("user age " + u.getAge() + "----user name " + u.getName());
 //		Assert.assertEquals(20, u.getAge().intValue());
-	}
-	@Test
-	public void test(){
-		AvTrackerItem avTrackerItem =new AvTrackerItem();
-		AvTrackerItem build = avTrackerItem.builder().id(18L).avProfit(new BigDecimal(99.00)).build();
+    }
 
-	}
-
+    @Test
+    public void test() {
+//		AvTrackerItem avTrackerItem =new AvTrackerItem();
+//		AvTrackerItem build = avTrackerItem.builder().id(18L).avProfit(new BigDecimal(99.00)).build();
 
 
+        String data = "2017-05-14";
+        long l = Long.parseLong(data);
+        System.out.println(l);
+
+    }
 
 
-	@Test
-	public void tyestt(){
+    @Test
+    public void tyestt() {
 
-		String s = "2017-06-22 10:55";
-		String[] s1 = s.split(" ");
-		System.out.println(s1);
+        String s = "2017-06-22 10:55";
+        String[] s1 = s.split(" ");
+        System.out.println(s1);
 
-		System.out.println(s1[1]);
-		System.out.println(s1[0]);
+        System.out.println(s1[1]);
+        System.out.println(s1[0]);
 
 
-		Byte b= 0;
-		System.out.println(b.toString());
-	}
+        Byte b = 0;
+        System.out.println(b.toString());
+
+
+        String ss = "17062019550104405901";
+        System.out.println(Long.parseLong(ss));
+        System.out.println(Long.valueOf(ss));
+
+
+        String sq1 = "{\"name\":\"nihao\",\"age\":\"18\"}";
+        if (sq1 != null) {
+
+        }
+        if (sq1 == null) {
+
+        }
+    }
 }
