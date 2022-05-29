@@ -13,6 +13,7 @@ public class UserController {
 
     @RequestMapping(value = "/hello")
     public User cs() {
+        //
        /* //调用dao层   添加注释a test' 啊    test   test02
         User user = userMapper.selectUserByName("lilei");
         Integer id = user.getId();
