@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     //依赖注入
     @Autowired
+            //
     UserMapper userMapper;
 
     @RequestMapping(value = "/hello")
